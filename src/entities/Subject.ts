@@ -1,4 +1,10 @@
-import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from 'typeorm'
+import {
+	Column,
+	Entity,
+	JoinTable,
+	ManyToMany,
+	PrimaryGeneratedColumn,
+} from 'typeorm'
 import { Room } from './Room'
 
 @Entity('subjects')
@@ -19,7 +25,7 @@ export class Subject {
 		inverseJoinColumn: {
 			name: 'subject_id',
 			referencedColumnName: 'id',
-		}
+		},
 	})
 	rooms: Room[]
 }
